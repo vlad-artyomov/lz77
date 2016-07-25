@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="600.0" minWidth="800.0"
+            prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.artyomov.Controller">
+    <children>
+        <MenuBar fx:id="menu" prefHeight="10.0" prefWidth="755.0" AnchorPane.leftAnchor="0.0"
+                 AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="Меню">
+                    <items>
+                        <MenuItem fx:id="menuClear" mnemonicParsing="false" text="Очистить данные"/>
+                        <MenuItem fx:id="menuAbout" mnemonicParsing="false" text="Об авторе"/>
+                        <MenuItem fx:id="menuExit" mnemonicParsing="false" text="Выйти"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <AnchorPane fx:id="window" layoutX="24.0" layoutY="104.0" prefHeight="568.0" prefWidth="755.0"
+                    AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                    AnchorPane.topAnchor="32.0">
+            <children>
+                <Button fx:id="btnOpenSourceFile" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="40.0"
+                        prefWidth="178.0" text="Открыть файл и сжать" wrapText="true" AnchorPane.leftAnchor="10.0"/>
+                <Button fx:id="btnOpenCodedFile" layoutX="200.0" layoutY="14.0" mnemonicParsing="false" prefHeight="40.0"
+                        prefWidth="178.0" text="Распаковать файл"/>
+                <Label layoutX="14.0" layoutY="85.0" text="Исходный файл" AnchorPane.leftAnchor="10.0"/>
+                <Label layoutX="10.0" layoutY="366.0" text="Запакованный файл"/>
+                <TextArea fx:id="taSourceText" layoutX="24.0" layoutY="106.0" prefHeight="236.0" prefWidth="776.0"
+                          AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="112.0"/>
+                <TextArea fx:id="taCodedText" layoutX="14.0" layoutY="389.0" prefHeight="165.0" prefWidth="780.0"
+                          AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0"
+                          AnchorPane.topAnchor="393.0"/>
+                <TextField fx:id="tfCompressedValue" layoutX="554.0" layoutY="14.0" prefHeight="40.0" prefWidth="187.0"
+                           AnchorPane.rightAnchor="10.0"/>
+                <Label layoutX="505.0" layoutY="24.0" text="Коэф. сжатия" AnchorPane.rightAnchor="204.0"/>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
