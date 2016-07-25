@@ -10,11 +10,11 @@
         <MenuBar fx:id="menu" prefHeight="10.0" prefWidth="755.0" AnchorPane.leftAnchor="0.0"
                  AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <menus>
-                <Menu mnemonicParsing="false" text="Меню">
+                <Menu mnemonicParsing="false" text="Menu">
                     <items>
-                        <MenuItem fx:id="menuClear" mnemonicParsing="false" text="Очистить данные"/>
-                        <MenuItem fx:id="menuAbout" mnemonicParsing="false" text="Об авторе"/>
-                        <MenuItem fx:id="menuExit" mnemonicParsing="false" text="Выйти"/>
+                        <MenuItem fx:id="menuClear" mnemonicParsing="false" text="Clear data"/>
+                        <MenuItem fx:id="menuAbout" mnemonicParsing="false" text="About"/>
+                        <MenuItem fx:id="menuExit" mnemonicParsing="false" text="Exit"/>
                     </items>
                 </Menu>
             </menus>
@@ -24,11 +24,11 @@
                     AnchorPane.topAnchor="32.0">
             <children>
                 <Button fx:id="btnOpenSourceFile" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="40.0"
-                        prefWidth="178.0" text="Открыть файл и сжать" wrapText="true" AnchorPane.leftAnchor="10.0"/>
+                        prefWidth="178.0" text="Open file and compress" wrapText="true" AnchorPane.leftAnchor="10.0"/>
                 <Button fx:id="btnOpenCodedFile" layoutX="200.0" layoutY="14.0" mnemonicParsing="false" prefHeight="40.0"
-                        prefWidth="178.0" text="Распаковать файл"/>
-                <Label layoutX="14.0" layoutY="85.0" text="Исходный файл" AnchorPane.leftAnchor="10.0"/>
-                <Label layoutX="10.0" layoutY="366.0" text="Запакованный файл"/>
+                        prefWidth="178.0" text="Uncompress file"/>
+                <Label layoutX="14.0" layoutY="85.0" text="Source file:" AnchorPane.leftAnchor="10.0"/>
+                <Label layoutX="10.0" layoutY="366.0" text="Output file:"/>
                 <TextArea fx:id="taSourceText" layoutX="24.0" layoutY="106.0" prefHeight="236.0" prefWidth="776.0"
                           AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="112.0"/>
                 <TextArea fx:id="taCodedText" layoutX="14.0" layoutY="389.0" prefHeight="165.0" prefWidth="780.0"
@@ -36,7 +36,7 @@
                           AnchorPane.topAnchor="393.0"/>
                 <TextField fx:id="tfCompressedValue" layoutX="554.0" layoutY="14.0" prefHeight="40.0" prefWidth="187.0"
                            AnchorPane.rightAnchor="10.0"/>
-                <Label layoutX="505.0" layoutY="24.0" text="Коэф. сжатия" AnchorPane.rightAnchor="204.0"/>
+                <Label layoutX="505.0" layoutY="24.0" text="Compression factor:" AnchorPane.rightAnchor="204.0"/>
             </children>
         </AnchorPane>
     </children>

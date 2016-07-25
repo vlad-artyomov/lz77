@@ -63,7 +63,7 @@ public class LZ77 {
                     try {
                         output = mSearchBuffer.substring(offset, offset + length);
                     } catch (StringIndexOutOfBoundsException e) {
-                        System.err.println("Что-то пошло не так :(");
+                        System.err.println("Something goes wrong :(");
                     }
                     //System.out.print(output);
                     mSearchBuffer.append(output);

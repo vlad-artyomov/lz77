@@ -41,7 +41,7 @@ public class Controller {
         menuExit.setOnAction(actionEvent -> Platform.exit());
 
         menuAbout.setOnAction(actionEvent -> {
-            showDialog(Alert.AlertType.INFORMATION, "Автор", "Владислав Артёмов\nГруппа ИУС-12а");
+            showDialog(Alert.AlertType.INFORMATION, "Author", "Vlad Artyomov\nDonNTU");
         });
 
         menuClear.setOnAction(actionEvent -> {
@@ -52,8 +52,8 @@ public class Controller {
 
         btnOpenSourceFile.addEventHandler(MouseEvent.MOUSE_CLICKED, mouseEvent -> {
             FileChooser fileChooser = new FileChooser();
-            fileChooser.setTitle("Исходный файл");
-            FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("Текстовые файлы (*.txt)", "*.txt");
+            fileChooser.setTitle("Source text file");
+            FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("Text files (*.txt)", "*.txt");
             fileChooser.getExtensionFilters().add(extFilter);
             File file = fileChooser.showOpenDialog(null);
             DecimalFormat df = new DecimalFormat("0.00");
@@ -69,15 +69,15 @@ public class Controller {
 
                 } catch (IOException e) {
                     System.err.println(e.toString());
-                    showDialog(Alert.AlertType.ERROR, "Ошибка", "Неверный исходный файл");
+                    showDialog(Alert.AlertType.ERROR, "Error", "Wrong source file");
                 }
             }
         });
 
         btnOpenCodedFile.addEventHandler(MouseEvent.MOUSE_CLICKED, mouseEvent -> {
             FileChooser fileChooser = new FileChooser();
-            fileChooser.setTitle("Запакованный файл");
-            FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("Текстовые файлы (*.lz77)", "*.lz77");
+            fileChooser.setTitle("Output file");
+            FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("Text files (*.lz77)", "*.lz77");
             fileChooser.getExtensionFilters().add(extFilter);
             File file = fileChooser.showOpenDialog(null);
             DecimalFormat df = new DecimalFormat("0.00");
@@ -92,7 +92,7 @@ public class Controller {
                     tfCompressedValue.setText(String.valueOf(df.format(((double) decoded.length() - (double) file.length()) / (double) decoded.length() * 100.0)) + "%");
                 } catch (IOException e) {
                     System.err.println(e.toString());
-                    showDialog(Alert.AlertType.ERROR, "Ошибка", "Неверно запакованный файл");
+                    showDialog(Alert.AlertType.ERROR, "Error", "Wrong output file");
                 }
             }
         });
